@@ -22,4 +22,9 @@ class MahasiswaModel extends CI_Model{
         $this->db->where('id', $id);
         $this->db->delete('mahasiswa');
     }
+
+    public function getMahasiswaById($id)
+    {
+      return $this->db->get_where('mahasiswa', array('id' => $id))->row_array();
+    }
 }

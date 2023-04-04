@@ -25,6 +25,8 @@
                 <?php foreach ($mahasiswa as $mhs) : ?>
                     <li class="list-group-item"><?= $mhs['nama'] ?>
                         <a href="<?= base_url()?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('apakah kamu yakin?')">hapus</a>
+                        <a href="<?= base_url()?>mahasiswa/edit/<?= $mhs['id']; ?>" class="badge badge-warning float-right mr-2" >edit</a>
+                        <a href="<?= base_url()?>mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right mr-2" >detail</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
